@@ -17,7 +17,7 @@ export default function Signup() {
   const signup = async (e) => {
     e.preventDefault();
 
-    const res = await fetch("http://localhost:8080/api/users/save", {
+    const res = await fetch("http://localhost:8083/api/users/save", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(user)
@@ -34,7 +34,7 @@ export default function Signup() {
   // GOOGLE OAUTH SIGNUP / LOGIN
   const googleSignup = () => {
     window.location.href =
-      "http://localhost:8080/oauth2/authorization/google";
+      "http://localhost:8083/oauth2/authorization/google";
   };
 
   return (
